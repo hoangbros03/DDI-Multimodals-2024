@@ -1,0 +1,55 @@
+
+# PLEASE CREATE NEW CONFIG INSTEAD OF OVERRIDE THIS CONFIG
+# Change this string to change the folder name of saving models
+training_session_name: "Bert_mean"
+
+# Wandb init info
+representation: "SDP"
+preprocess: "None"
+features: "fasttext, tag, position"
+
+# Lookup
+lookup_word: 'cache/fasttext/nguyennb/all_words.txt'
+lookup_tag: 'cache/fasttext/nguyennb/all_pos.txt'
+lookup_dep: 'cache/fasttext/nguyennb/all_dep.txt'
+lookup_direction: 'cache/fasttext/nguyennb/all_direction.txt'
+
+# Load pkl config
+all_candidates_train: 'cache/pkl/v2/notprocessed.candidates.train.pkl'
+all_candidates_test: 'cache/pkl/v2/notprocessed.candidates.test.pkl'
+sdp_train_mapped: 'cache/pkl/v2/notprocessed.mapped.sdp.train.pkl'
+sdp_test_mapped: 'cache/pkl/v2/notprocessed.mapped.sdp.test.pkl'
+fasttext_path: 'D:\ResearchMultimodal\npz_files\bert_mean_token.npz'
+vocab_path: 'cache/fasttext/nguyennb/all_words.txt'
+
+# Train configs
+min_batch_size: 3
+batch_size: 128
+weight_decay: 0.001
+lr: 0.0001
+epochs: 300
+dropout_rate: 0
+word_embedding_size: 768
+tag_number: 51
+tag_embedding_size: 50
+position_number: 4
+position_embedding_size: 50
+direction_number: 3
+direction_embedding_size: 50
+edge_number: 46
+edge_embedding_size: 200
+token_embedding_size: 500
+dep_embedding_size: 500
+conv1_out_channels: 256
+conv2_out_channels: 256
+conv3_out_channels: 256
+conv1_length: 1
+conv2_length: 2
+conv3_length: 3
+w_false: 27792 / 23771
+w_advice: 27792 / 826
+w_effect: 27792 / 1687
+w_mechanism: 27792 / 1319
+w_int: 27792 / 189
+device: "cuda"
+
